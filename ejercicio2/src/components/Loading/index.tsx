@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLoader } from "react-spinners";
+import { GridLoader } from "react-spinners";
 import "./LoadingStyles.scss";
 import { constants } from "utils/defaultConstants";
 
@@ -9,9 +9,9 @@ const Loading: React.FC<{ active: boolean }> = (props) => {
   return (
     <div className="loader__container">
       <div className="overLays" />
-      <HashLoader
+      <GridLoader
         color={constants.MAIN_COLOR}
-        size={150}
+        size={40}
         aria-label="Loading Spinner"
         data-testid="loader"
       />

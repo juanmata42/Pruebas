@@ -28,6 +28,8 @@ Color: Deep Red (#D32F2F): Red is often associated with health emergencies and a
 15. Added eslint for error checking and code formatting, to impose a code style and avoid errors (especially necessary if there was more than one developer)
 16. Added redux to handle the state of the app, with a store. Added custom hooks to access the store and dispatch actions. Handling loading state.
 17. Added a very simple header, just a logo and a title. In a real project, this would turn into a navbar and in mobile, probably it would move to the bottom.
+18. The loader in NameSage is a hashtag, since it's a symbol that is often associated with names. In COVIDChronicle, it's a grid with growing dots, something that can be associated to a calendar and a common representation of the spread of a virus in a map.
+
 
 Suggested improvements:
 1. Previous design work done by a real designer and a figma guide. 
