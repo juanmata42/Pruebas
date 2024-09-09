@@ -1,0 +1,21 @@
+@use 'styles/normalize';
+@use 'styles/fonts';
+@use 'styles/colors';
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+
+.main-header{
+    background-color: colors.$primary;
+    height: 70px;
+    z-index: 500;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: colors.$secondary;
+    .main-header__icon{
+        height: 100%;
+    }
+}

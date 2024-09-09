@@ -1,0 +1,26 @@
+$bold: 900;
+$semi-bold: 500;
+$normal: normal;
+$font-normal: "Sen", sans-serif;
+$font-bold: "Sen", sans-serif;
+
+.font-normal {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-bold {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.font-semibold {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
