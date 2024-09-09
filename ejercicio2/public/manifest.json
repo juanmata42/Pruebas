@@ -46,6 +46,6 @@
     ],
     "background_color": "#ffffff",
     "display": "standalone",
-    "theme_color": "#008080",
-    "description": "Finding names around the world"
+    "theme_color": "#D32F2F",
+    "description": "Tracking covid in USA"
 }

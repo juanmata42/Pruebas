@@ -3,7 +3,6 @@
 @use 'styles/colors';
 @use 'styles/breakpoints';
 @use 'styles/mixins';
-@use 'styles/animations';
 
 .main-header{
     background-color: colors.$primary;
@@ -12,4 +11,8 @@
     z-index: 500;
     width: 100%;
     top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: colors.$secondary;
 }

@@ -1,4 +1,4 @@
-import { routes, ROUTE_TYPE_REDIRECT, ROUTE_PATH } from "routes";
+import { routes, ROUTE_TYPE_REDIRECT } from "routes";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Error from "routes/Error";
 import Loading from "components/Loading";
@@ -33,7 +33,7 @@ function App() {
                       <Error title="Error" content="An error occurred." />
                     }
                   >
-                    {route.header && <header />}
+                    {route.header && <Header />}
                     <Loading active={loading} />
                     {route.component && <route.component />}
                   </ErrorBoundary>

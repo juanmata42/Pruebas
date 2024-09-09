@@ -31,7 +31,6 @@
 .title-primary {
   font-family: fonts.$font-bold;
   font-weight: fonts.$bold;
-  color: colors.$primary-text-color;
   font-size: 30px;
   // for tablet
     @media (max-width: breakpoints.$tablet) {
@@ -45,7 +44,6 @@
 
 .title-secondary {
   font-family: fonts.$font-bold;
-  color: colors.$primary-text-color;
   font-weight: fonts.$bold;
   font-size: 24px;
   // for tablet
@@ -60,7 +58,6 @@
 
 .title-tertiary {
   font-family: fonts.$font-bold;
-  color: colors.$primary-text-color;
   font-size: 20px;
   // for tablet
     @media (max-width: breakpoints.$tablet) {
@@ -74,7 +71,6 @@
 
 .text {
     font-family: fonts.$font-normal;
-    color: colors.$primary-text-color;
     font-size: 16px;
     .inline-icon{
       height: 14px;
@@ -97,7 +93,6 @@
 
 .text-bold {
     font-family: fonts.$font-bold;
-    color: colors.$primary-text-color;
     font-size: 16px;
      .inline-icon{
       height: 14px;
