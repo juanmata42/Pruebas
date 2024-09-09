@@ -1,20 +1,20 @@
 import axios from "axios";
 import { constants } from "./defaultConstants";
-
+import { loadingActions } from "store/loading";
+import { Dispatch } from 'redux';
 const baseURL = constants.DEFAULT_BACKEND_URL;
-export const API = axios.create({ baseURL, withCredentials: true });
+export const API = axios.create({ baseURL });
 
-/*
-export const getCurrentUser = async () => {
+
+export const getCovidData = async (dispatch: Dispatch) => {
+    dispatch(loadingActions.show());
   try {
-    const { data } = await API.get('/users/me');
+    const { data } = await API.get('/covid/historical');
+    dispatch(loadingActions.hide())
     return data;
   } catch (error) {
-    if (axios.isAxiosError(error)) {
-      const data = await handleAxiosError(error);
-      return data;
-    }
+    dispatch(loadingActions.hide())
     return error;
   }
 }; 
-*/
+

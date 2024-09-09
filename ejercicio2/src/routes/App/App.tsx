@@ -30,7 +30,10 @@ function App() {
                 element={
                   <ErrorBoundary
                     fallback={
-                      <Error title="Error" content="An error occurred." />
+                      <>
+                      <Header />
+                      <Error title="Error" content="Something went wrong, please refresh the page" />
+                      </>
                     }
                   >
                     {route.header && <Header />}

@@ -19,8 +19,8 @@ const Error: React.FC<ErrorProps> = ({ title, content }) => {
 
   return (
     <section className="error">
-      <h1>{title}</h1>
-      <p>{content}</p>
+      <h1 className="title-primary">{title}</h1>
+      <p className="text">{content}</p>
     </section>
   );
 };
