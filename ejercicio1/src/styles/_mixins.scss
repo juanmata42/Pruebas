@@ -1,0 +1,63 @@
+@use 'styles/normalize';
+@use 'styles/fonts';
+@use 'styles/colors';
+@use 'styles/breakpoints';
+
+// border style mixin
+@mixin shadow-border{
+  border-radius: 10px;
+  box-shadow: 2px 2px 14px 0 colors.$shadow;
+}
+
+@mixin gradient-color-vertical($color1, $color2){
+  background: linear-gradient($color1, $color2);
+}
+
+@mixin gradient-color-horizontal($color1, $color2){
+  background: linear-gradient(to right, $color1, $color2);
+}
+
+@mixin change-color-hover($color){
+  &:hover{
+    color: $color;
+  }
+}
+
+@mixin spaceForHeader{
+  @media screen and (min-width: breakpoints.$tablet){
+    margin-top: 90px;
+  }
+}
+
+@mixin spaceForMobileHeader{
+  @media screen and (max-width: breakpoints.$tablet){
+    padding-bottom: 90px;
+  }
+  @media screen and (max-width: breakpoints.$mobile){
+    padding-bottom: 70px;
+  }
+}
+
+@mixin paddingBottomDesktop{
+  @media screen and (min-width: breakpoints.$tablet){
+    padding-bottom: 20px;
+  }
+}
+@mixin marginTopMobile{
+  @media screen and (max-width: breakpoints.$tablet){
+    margin-top: 20px;
+  }
+}
+
+@mixin sidePaddings{
+  padding-left: calc(((100vw - breakpoints.$desktop) / 2) + 30px);
+  padding-right: calc(((100vw - breakpoints.$desktop) / 2) + 30px);
+  @media screen and (max-width: breakpoints.$desktop){    
+      padding-left: 20px;
+      padding-right: 20px; 
+  }
+  @media screen and (max-width: breakpoints.$tablet){    
+      padding-left: 10px;
+      padding-right: 10px; 
+  }
+}
