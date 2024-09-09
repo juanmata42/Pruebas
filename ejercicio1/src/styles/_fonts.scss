@@ -1,0 +1,27 @@
+$bold: 900;
+$semi-bold: 500;
+$normal: normal;
+$font-normal: 'Avenir-book';
+$font-bold: 'Avenir-black';
+
+.font-normal {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-bold {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.font-semibold {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+// Le petit cochon

@@ -1,0 +1,15 @@
+@use 'styles/normalize';
+@use 'styles/fonts';
+@use 'styles/colors';
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+@use 'styles/animations';
+
+.main-header{
+    background-color: colors.$primary;
+    position: fixed;
+    height: 100px;
+    z-index: 500;
+    width: 100%;
+    top: 0;
+}
