@@ -27,6 +27,7 @@ Color: Deep Red (#D32F2F): Red is often associated with health emergencies and a
 14. Added basic styles and style files order to the app, including a global style file and a theme file for colors and fonts.
 15. Added eslint for error checking and code formatting, to impose a code style and avoid errors (especially necessary if there was more than one developer)
 16. Added redux to handle the state of the app, with a store. Added custom hooks to access the store and dispatch actions. Handling loading state.
+17. Added a very simple header, just a logo and a title. In a real project, this would turn into a navbar and in mobile, probably it would move to the bottom.
 
 Suggested improvements:
 1. Previous design work done by a real designer and a figma guide. 
