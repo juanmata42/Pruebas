@@ -1,5 +1,13 @@
 # Pruebas
-Steps followed:
+Launching locally:
+1. Clone the repository.
+2. Run `npm install` in both folders.
+3. Run `npm run dev` in both folders.
+4. Open the browser in localhost:3000 for NameSage and localhost:3001 for COVIDChronicle.
+(Launch the backend too, else it wont work)
+(I suggest to check it with the phone too since it was developed both for desktop and mobile)
+
+Developing Steps followed:
 1. Create a new repository in GitHub.
 2. Clone the repository in the local machine.
 3. Create new working branches for git developing flow (dev, pre), main works as production.
@@ -29,8 +37,20 @@ Color: Deep Red (#D32F2F): Red is often associated with health emergencies and a
 16. Added redux to handle the state of the app, with a store. Added custom hooks to access the store and dispatch actions. Handling loading state.
 17. Added a very simple header, just a logo and a title. In a real project, this would turn into a navbar and in mobile, probably it would move to the bottom.
 18. The loader in NameSage is a hashtag, since it's a symbol that is often associated with names. In COVIDChronicle, it's a grid with growing dots, something that can be associated to a calendar and a common representation of the spread of a virus in a map.
+19. Created charts, table and card components as a way of showing the posibilities of this project. As future steps, we would consult with both the designer and the product owner to understand what data is more important to show and how to show it.
+19. Finished the second exercise.
+20. Decided on using pastel colors as palette for the charts, as they are easy on the eyes and can be associated with health and calmness. Also because not using blue and pink as gender colors is a good practice nowadays.
+21. Removed ant icons, finally, they wont be needed.
 
+Auditing results (Google Lighthouse):
+NameSage:
+COVIDChronicle:
+- Performance: 65 (extensions affected the page's load performance)
+- Accessibility: 94
+- Best Practices: 96
+- SEO: 83
 
 Suggested improvements:
 1. Previous design work done by a real designer and a figma guide. 
 2. I created seeds in the default constants for what could become an internationalization system. I believe this should be necessary in both projects, but specially in the first one considering its purpose. Depending if there is a company api for internationalization, this could be achieved by api calls for the literals or by setting them to the state, maybe through redux.
+3. Didn't have time for unit testing, but it's a must for a real project. I would use jest and react testing library for this. Adding sonarqube to the pipeline would be a good idea too.

@@ -3,13 +3,13 @@ import { constants } from "./defaultConstants";
 import { loadingActions } from "store/loading";
 import { Dispatch } from 'redux';
 const baseURL = constants.DEFAULT_BACKEND_URL;
-export const API = axios.create({ baseURL, withCredentials: true });
+export const API = axios.create({ baseURL });
 
 
 export const getGenderData = async (name: string, dispatch: Dispatch) => {
   dispatch(loadingActions.show());
   try {
-    const { data } = await API.get(`/api/genderize/${name}`);
+    const { data } = await API.get(`/genderize/${name}`);
     dispatch(loadingActions.hide());
     return data;
   } catch (error) {
@@ -21,7 +21,7 @@ export const getGenderData = async (name: string, dispatch: Dispatch) => {
 export const getNationalizeData = async (name: string, dispatch: Dispatch) => {
   dispatch(loadingActions.show());
   try {
-    const { data } = await API.get(`/api/nationalize/${name}`);
+    const { data } = await API.get(`/nationalize/${name}`);
     dispatch(loadingActions.hide());
     return data;
   } catch (error) {
@@ -33,7 +33,7 @@ export const getNationalizeData = async (name: string, dispatch: Dispatch) => {
 export const getAgeData = async (name: string, dispatch: Dispatch) => {
   dispatch(loadingActions.show());
   try {
-    const { data } = await API.get(`/api/agify/${name}`);
+    const { data } = await API.get(`/agify/${name}`);
     dispatch(loadingActions.hide());
     return data;
   } catch (error) {

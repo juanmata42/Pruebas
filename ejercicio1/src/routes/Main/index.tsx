@@ -1,17 +1,59 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getGenderData, getNationalizeData, getAgeData } from "utils/apiCalls"; // Adjust the path if necessary
+import GenderChart from "components/GenderPieChart";
+import NationalityChart from "components/CountryLineChart";
+import AgeCard from "components/AgeCard";
+import SearchBar from "components/SearchBar";
 import "./mainStyles.scss";
 
-const Main: React.FC = () => {
-  const [loading, setLoading] = useState<boolean>(true);
+export interface GenderResponse {
+  count: number;
+  name: string;
+  gender: "male" | "female"; // Gender is either "male" or "female"
+  probability: number; // Probability between 0 and 1
+}
+export interface Country {
+  country_id: string;
+  probability: number;
+}
 
-  useEffect(() => {
-    setLoading(false);
-  }, []);
+export interface NationalizeResponse {
+  count: number;
+  name: string;
+  country: Country[];
+}
+export interface AgeResponse {
+  count: number;
+  name: string;
+  age: number;
+}
+
+
+const Main: React.FC = () => {
+  const dispatch = useDispatch();
+  const [genderData, setGenderData] = useState<GenderResponse | null>(null);
+  const [nationalizeData, setNationalizeData] = useState<NationalizeResponse | null>(null);
+  const [ageData, setAgeData] = useState<AgeResponse | null>(null);
+
+  const handleSearch = async (name: string) => {
+    // Trigger API calls for each endpoint
+    const genderResponse = await getGenderData(name, dispatch);
+    const nationalizeResponse = await getNationalizeData(name, dispatch);
+    const ageResponse = await getAgeData(name, dispatch);
+
+    // Set data from API responses into state
+    setGenderData(genderResponse);
+    setNationalizeData(nationalizeResponse);
+    setAgeData(ageResponse);
+  };
 
   return (
     <section className="main">
-      <h1>Main</h1>
+      <SearchBar onSearch={handleSearch} />
+      {ageData && <AgeCard name={ageData.name} age={ageData.age} />}
+      {genderData && <GenderChart data={genderData} />}
+      {nationalizeData && <NationalityChart data={nationalizeData} />}
     </section>
   );
 };

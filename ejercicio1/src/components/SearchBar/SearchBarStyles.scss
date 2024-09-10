@@ -1,0 +1,55 @@
+@use 'styles/normalize';
+@use 'styles/fonts';
+@use 'styles/colors';
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    padding: 20px;
+  background-color: colors.$gray;
+  @include mixins.shadow-border;
+    height: min-content;
+    gap: 10px;
+  @media screen and (max-width: breakpoints.$tablet) {
+    max-width: 100%;
+    width: 100%;
+  }
+  input {
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+
+    &:focus {
+      border-color: colors.$primary;
+      @include mixins.shadow-border;
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  button {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+
+    &:hover {
+      background-color: colors.$dark-gray;
+    }
+
+    &:active {
+      background-color: colors.$dark-gray;
+    }
+  }
+}
