@@ -4,7 +4,6 @@
 @use 'styles/breakpoints';
 @use 'styles/mixins';
 .main {
-  @include mixins.sidePaddings;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -12,4 +11,5 @@
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
+  @include mixins.sidePaddings;
 }
