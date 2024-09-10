@@ -22,7 +22,6 @@ export const routes = [
     exact: false,
     ignoreSession: false,
     header: true,
-    navBar: true,
   },
   {
     type: ROUTE_TYPE_REDIRECT,

@@ -31,7 +31,6 @@
 .title-primary {
   font-family: fonts.$font-bold;
   font-weight: fonts.$bold;
-  color: colors.$primary-text-color;
   font-size: 30px;
   // for tablet
     @media (max-width: breakpoints.$tablet) {
@@ -39,13 +38,12 @@
     }
     // for mobile
     @media (max-width: breakpoints.$mobile) {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 
 .title-secondary {
   font-family: fonts.$font-bold;
-  color: colors.$primary-text-color;
   font-weight: fonts.$bold;
   font-size: 24px;
   // for tablet
@@ -54,27 +52,25 @@
     }
     // for mobile
     @media (max-width: breakpoints.$mobile) {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
 .title-tertiary {
   font-family: fonts.$font-bold;
-  color: colors.$primary-text-color;
   font-size: 20px;
   // for tablet
     @media (max-width: breakpoints.$tablet) {
-        font-size: 16px;
+        font-size: 18px;
     }
     // for mobile
     @media (max-width: breakpoints.$mobile) {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
 .text {
     font-family: fonts.$font-normal;
-    color: colors.$primary-text-color;
     font-size: 16px;
     .inline-icon{
       height: 14px;
@@ -97,7 +93,6 @@
 
 .text-bold {
     font-family: fonts.$font-bold;
-    color: colors.$primary-text-color;
     font-size: 16px;
      .inline-icon{
       height: 14px;

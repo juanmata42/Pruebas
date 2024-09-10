@@ -1,0 +1,42 @@
+@use 'styles/normalize';
+@use 'styles/fonts';
+@use 'styles/colors';
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+
+.deaths-summary-card {
+  padding: 20px;
+  background-color: colors.$gray;
+  border-radius: 10px;
+  @include mixins.shadow-border;
+  text-align: center;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: calc(30% - 20px);
+  @media screen and (max-width: breakpoints.$tablet) {
+    max-width: 100%;
+    width: 100%;
+  }
+  h3 {
+    color: colors.$dark-gray;
+    margin-bottom: 10px;
+  }
+
+  .total, .new-deaths, .change-percent {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .positive {
+    color: colors.$positive;
+  }
+
+  .negative {
+    color: colors.$negative;
+  }
+}
