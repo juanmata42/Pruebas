@@ -1,6 +1,7 @@
 import React from "react";
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, Legend } from "recharts";
 import "./GenderPieChartStyles.scss";
+import { constants } from "utils/defaultConstants";
 interface GenderChartProps {
   data: {
     gender: string;
@@ -10,24 +11,30 @@ interface GenderChartProps {
 
 const GenderChart: React.FC<GenderChartProps> = ({ data }) => {
   const pieData = [
-    { name: "Male", value: data.probability * 100 },
-    { name: "Female", value: (1 - data.probability) * 100 },
+    { name: `${Math.round(data.probability * 100)}% male`, value: data.probability * 100 },
+    { name: `${Math.round((1 - data.probability) * 100)}% female`, value: (1 - data.probability) * 100 },
   ];
 
   return (
     <div className="gender-chart">
-      <h2>Gender Probability</h2>
-      <PieChart width={400} height={400}>
+      <h2 className="title-primary">Gender Probability</h2>
+      <PieChart width={300} height={400}>
+        <Legend
+          layout="horizontal"
+          align="center"
+          verticalAlign="bottom"
+          iconType="circle"
+        />
         <Pie
           data={pieData}
           dataKey="value"
           nameKey="name"
           cx="50%"
           cy="50%"
-          outerRadius={80}
+          outerRadius={120}
         >
-          <Cell key="male" fill="#8884d8" />
-          <Cell key="female" fill="#82ca9d" />
+          <Cell key="male" fill={constants.palette.pastelOrange} />
+          <Cell key="female" fill={constants.palette.pastelPurple} />
         </Pie>
       </PieChart>
     </div>
