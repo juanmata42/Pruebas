@@ -6,7 +6,7 @@
 3. Run `npm run dev` in both folders.
 4. Open the browser at `localhost:3000` for **NameSage** and `localhost:3001` for **COVIDChronicle**.
    > **Note**: Launch the backend too, or else it won't work.  
-   > I suggest checking it with your phone as well since it was developed for both desktop and mobile.
+   > I suggest checking it with your phone as well since it was developed for both desktop and mobile, although for this you need to run the backend on your phone too.
 
 ## Developing Steps Followed:
 1. Create a new repository in GitHub.
