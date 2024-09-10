@@ -13,4 +13,12 @@ export const constants = {
   DEFAULT_BACKEND_URL: `${window.MAIN_API_URL}/api`,
   MAINT_MODE: window.MAINT_MODE,
   MAIN_COLOR: window.MAIN_COLOR,
+  palette: {
+    pastelYellow: "#FFD700",
+    pastelBlue: "#ADD8E6",
+    pastelGreen: "#98FB98",
+    pastelPink: "#FFB6C1",
+    pastelPurple: "#9370DB",
+    pastelOrange: "#FFA500",
+  },
 };
