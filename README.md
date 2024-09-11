@@ -66,3 +66,4 @@
 1. Previous design work by a real designer and a Figma guide would enhance UX and UI.
 2. Consider internationalization, particularly for **NameSage**, which is globally relevant. Implement seeds for internationalization in the default constants. This could be achieved via API calls or Redux state management.
 3. Unit testing is a must for a real project, though there was no time for it here. I would use Jest and React Testing Library. Integrating SonarQube in the pipeline is also a good idea.
+4. Backend is down - handling. Completely forgot to add a proper error handling for this. I would probably add a specific page, not the error one, but one showing a message like "Backend is down, we are working on it"
